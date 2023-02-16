@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ScriptTwo : MonoBehaviour
 {
-    // Start is called before the first frame update
+    int myInt = 5;
+
     void Start()
     {
         myInt = MultiplyByTwo(myInt);
