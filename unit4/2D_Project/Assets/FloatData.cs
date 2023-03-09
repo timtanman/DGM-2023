@@ -17,12 +17,19 @@ public class FloatData : ScriptableObject
     {
         power += num;
     }
+        public void UpdateValueTitan(float num)
+    {
+        value += num;
+    }
+
+        public void PowerUpdateTitan(float num)
+    {
+        power += num;
+    }
 
     public void ResetUpdate(float num)
     {
-        reset = 10;
-        power = 10;
-        value = 10;
+        value = num;
     }
 
 }
