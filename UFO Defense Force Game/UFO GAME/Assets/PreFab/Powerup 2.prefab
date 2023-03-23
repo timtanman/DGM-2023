@@ -242,13 +242,13 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: df9f8235bf36b8d4f96452d0e06d0ead, type: 2}
         m_TargetAssemblyTypeName: floatdata, Assembly-CSharp
-        m_MethodName: AddStringToObject
-        m_Mode: 5
+        m_MethodName: updatevalue
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 50
           m_StringArgument: Handgun
           m_BoolArgument: 0
         m_CallState: 2

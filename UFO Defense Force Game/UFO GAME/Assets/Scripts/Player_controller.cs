@@ -13,6 +13,12 @@ public class Player_controller : MonoBehaviour
 
     public Transform blaster;
     public GameObject Bullet;
+    public Transform blaster2;
+    public GameObject Bullet2;
+
+    
+
+
 
 
     void Update()
@@ -40,9 +46,12 @@ public class Player_controller : MonoBehaviour
             transform.position = new Vector3(transform.position.x, transform.position.y, zRange);
         }
 
+
+
         if(Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(Bullet, blaster.transform.position, Bullet.transform.rotation);
+            Instantiate(Bullet2, blaster2.transform.position, Bullet2.transform.rotation);
         }
 
 
