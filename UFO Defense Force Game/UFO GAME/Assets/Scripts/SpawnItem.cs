@@ -4,28 +4,22 @@ using UnityEngine;
 
 public class SpawnItem : MonoBehaviour
 {
- // The item to spawn
-    public GameObject Powerup;
 
-    // The time to wait between spawning items
-    public float spawnInterval = 10.0f;
-
-    // The timer to keep track of when to spawn the next item
-    private float spawnTimer = 0.0f;
-
-    private void Update()
+    public GameObject[] ammoPrefabs;
+    private float spawnRangeX = 20f;
+    private float spawnPosZ = 18f;
+    private float startDelay = 2f;
+    private float spawnInterval = 6f;
+    
+    void Start() 
     {
-        // Increment the spawn timer
-        spawnTimer += Time.deltaTime;
+        InvokeRepeating("SpawnrandomAmmo", startDelay, spawnInterval);
+    }
 
-        // Check if it's time to spawn a new item
-        if (spawnTimer >= spawnInterval)
-        {
-            // Reset the timer
-            spawnTimer = 0.0f;
-
-            // Spawn the item
-            Instantiate(Powerup, transform.position, Quaternion.identity);
-        }
+    public void SpawnrandomAmmo()
+    {
+            Vector3 spawnPOs = new Vector3(Random.Range(-spawnRangeX, spawnRangeX),1,spawnPosZ);
+            int ammoIndex = Random.Range(0,ammoPrefabs.Length);
+            Instantiate(ammoPrefabs[ammoIndex],spawnPOs, ammoPrefabs[ammoIndex].transform.rotation);
     }
 }

@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1fb1d8355d83bb4bbf6c40876d3021d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -5
+  speed: -3
 --- !u!114 &-4149884533173764755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -372,6 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f6cb051d235fe44aa28706190404f96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupEffect: {fileID: 1000010355441670, guid: 02a509a7fa70ed740ba4197e20c5d32d, type: 3}
 --- !u!1 &2412890638581865897
 GameObject:
   m_ObjectHideFlags: 0
