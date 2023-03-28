@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   topBounds: 30
-  lowerBounds: -25
+  lowerBounds: -12
 --- !u!54 &-3798936132961100640
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -177,6 +177,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 1000010355441670, guid: 02a509a7fa70ed740ba4197e20c5d32d, type: 3}
+  scoreManager: {fileID: 0}
+  scoreToGive: 10
 --- !u!1 &2484081779411873702
 GameObject:
   m_ObjectHideFlags: 0

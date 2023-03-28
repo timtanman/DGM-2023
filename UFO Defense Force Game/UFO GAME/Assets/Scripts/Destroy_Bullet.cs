@@ -7,15 +7,15 @@ public class Destroy_Bullet : MonoBehaviour
 
     public float topBounds = 30.0f;
     public float lowerBounds = -10.0f;
+    private GameManager gameManager;
 
 
     void Start()
     {
-        
+         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     void Awake() {
-        //Time.timeScale = 1;
     }
 
 
@@ -36,7 +36,7 @@ public class Destroy_Bullet : MonoBehaviour
             if(gameObject.CompareTag("Enemy"))
         {
             Debug.Log("Game Over");
-            Time.timeScale = 0;
+            gameManager.isGameOver = true;
         }
         }
     }

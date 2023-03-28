@@ -8,9 +8,7 @@ using UnityEngine;
 public class floatdata : ScriptableObject
 {
     public float ammo;
-    public string new_gun;
-    public Transform blaster;
-    public GameObject Bullet;
+    
     
 
     public void updatevalue(float num)
@@ -31,13 +29,6 @@ public class floatdata : ScriptableObject
         {
             ammo -= num;
             Debug.Log("Your ammunition is now " + ammo);
-        }
-    }
-    public void startstopammo(float num)
-    {
-        if(Input.GetKeyDown(KeyCode.Space) && num > 0)
-        {
-            Instantiate(Bullet, blaster.transform.position, Bullet.transform.rotation);
         }
     }
 }

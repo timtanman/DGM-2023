@@ -10,15 +10,19 @@ public class Player_controller : MonoBehaviour
     public float speed;
     public float xRange;
     public float zRange;
+    public float num;
 
     public Transform blaster;
     public GameObject Bullet;
     public Transform blaster2;
     public GameObject Bullet2;
-
+    public GameManager gameManager;
     
 
+    void Start()
+    {
 
+    }
 
 
     void Update()

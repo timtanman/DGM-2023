@@ -6,6 +6,12 @@ public class Kill_player : MonoBehaviour
 {
 
     public float multiplier = 1.4f;
+    public GameManager gameManager;
+
+    void Start() 
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
 
         private void OnTriggerEnter(Collider other)
         {
@@ -14,8 +20,8 @@ public class Kill_player : MonoBehaviour
 
             else if(other.CompareTag("Enemy"))
             {
+                gameManager.isGameOver = true;
                 Destroy(gameObject);
-                Time.timeScale = 0; // Stop the game
                 Debug.Log("Game Over");
             }
         }

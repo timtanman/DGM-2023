@@ -8,7 +8,7 @@ public class Color_Change : MonoBehaviour {
     public float duration = 1.0f;
     
     private float t = 0.0f;
-    private Renderer renderer;
+    private new Renderer renderer;
 
     void Start() {
         renderer = GetComponent<Renderer>();
