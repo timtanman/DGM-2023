@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour
 {
     public bool isGameOver;
     public GameObject gameOverText;
+    public AudioClip endGameSound;
+
+    private AudioSource audioSource;
 
     void Awake()
     {
@@ -16,6 +19,9 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = endGameSound;
+        audioSource.playOnAwake = false; // disable auto-play
         gameOverText = GameObject.Find("GameOverText");
 
         if (gameOverText == null)
@@ -43,7 +49,7 @@ public class GameManager : MonoBehaviour
         {
             gameOverText.SetActive(true);
         }
-
+        audioSource.Play();
         Time.timeScale = 0;
     }
 }

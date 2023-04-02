@@ -55,7 +55,7 @@ public class Player_controller : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(Bullet, blaster.transform.position, Bullet.transform.rotation);
-            Instantiate(Bullet2, blaster2.transform.position, Bullet2.transform.rotation);
+            //Instantiate(Bullet2, blaster2.transform.position, Bullet2.transform.rotation);
         }
 
 

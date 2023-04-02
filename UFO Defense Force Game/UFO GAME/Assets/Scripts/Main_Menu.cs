@@ -7,6 +7,7 @@ public class Main_Menu : MonoBehaviour
 {
 
     public int sceneToLoad;
+    public AudioSource Audio;
 
     // Start is called before the first frame update
     public void StartGame()
@@ -21,5 +22,10 @@ public class Main_Menu : MonoBehaviour
         Debug.Log("Quit Game!");
     }
 
-
+        public void playButton()
+    {
+        Audio.Play();
+    }
 }
+
+
