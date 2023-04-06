@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     {
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.clip = endGameSound;
-        audioSource.playOnAwake = false; // disable auto-play
+        audioSource.playOnAwake = false;
         gameOverText = GameObject.Find("GameOverText");
 
         if (gameOverText == null)
@@ -45,11 +45,6 @@ public class GameManager : MonoBehaviour
 
     void EndGame()
     {
-        if (gameOverText != null)
-        {
-            gameOverText.SetActive(true);
-        }
-        audioSource.Play();
         Time.timeScale = 0;
     }
 }
