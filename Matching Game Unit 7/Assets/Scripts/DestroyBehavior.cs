@@ -7,8 +7,13 @@ public class DestroyBehavior : MonoBehaviour
     public float seconds = 1;
     public WaitForSeconds wfsObj;
 
-    // Start is called before the first frame update
-    IEnumerator Start()
+    public void callDestroyTimer() 
+    {
+        StartCoroutine(DestroyTimer());
+    }
+
+
+    IEnumerator DestroyTimer()
     {
         wfsObj = new WaitForSeconds(seconds);
         yield return wfsObj;
