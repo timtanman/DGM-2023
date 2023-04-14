@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3758386386a2f0e4f8aaefb71d99d55d, type: 3}
-  m_Name: Prefab Instancer
+  m_Script: {fileID: 11500000, guid: 2f94816506bf2764f9eb092f22500ed2, type: 3}
+  m_Name: SquareLos 1
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3607941974477120402, guid: 70ebb40cd0a91004f96a912fc635ca61, type: 3}
-  prefab1: {fileID: 3607941974477120402, guid: ae66fa95d6cc7954199d3cad2f58b245, type: 3}
+  value: {x: 1, y: 1, z: 0}

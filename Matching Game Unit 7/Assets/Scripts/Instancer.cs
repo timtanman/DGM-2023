@@ -8,6 +8,7 @@ public class Instancer : ScriptableObject
 {
     public GameObject prefab;
     private int num;
+    public GameObject prefab1;
 
     public void CreateInstance() 
     {
@@ -42,9 +43,12 @@ public class Instancer : ScriptableObject
     {
         num = Random.Range(0, obj.vector3dList.Count - 1);
         Instantiate(prefab, obj.vector3dList[num].value, Quaternion.identity);
-
-
     }
 
+public void CreateInstanceListRandomly1(Vector3DataList obj) 
+    {
+        num = Random.Range(0, obj.vector3dList.Count - 1);
+        Instantiate(prefab1, obj.vector3dList[num].value, Quaternion.identity);
+    }
 
 }
