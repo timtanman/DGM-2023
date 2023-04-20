@@ -55,6 +55,14 @@ public class CoroutineBehavior : MonoBehaviour
         }
 
     }
+
+    public bool CanRun 
+    {
+        get => canRun;
+        set => canRun = value;
+    }
+
+
   
 
 }

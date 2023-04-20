@@ -33,4 +33,18 @@ public class Match_Behavior : MonoBehaviour
         }
     }
 
+public void DestroyOnTrigger(Collider collider)
+{
+    // Wait for half a second
+    StartCoroutine(DestroyAfterDelay(collider.gameObject, 0.1f));
+}
+
+public IEnumerator DestroyAfterDelay(GameObject obj, float delay)
+{
+    yield return new WaitForSeconds(delay);
+
+    // Destroy the game object
+    Destroy(obj);
+}
+
 }
